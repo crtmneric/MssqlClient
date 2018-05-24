@@ -1,0 +1,293 @@
+2018-04-19 17:15:25,948 [1] ERROR log4net.Appender.RollingFileAppender - DB CONNECTION STRING SAVE FAILED!
+System.NullReferenceException: Nesne baþvurusu bir nesnenin örneðine ayarlanmadý.
+   konum: MssqlClient.Classes.Beans.AppSettings.SaveConnectionString(String key, String value) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Beans\AppSettings.cs içinde: satýr 22
+   konum: MssqlClient.Classes.Views.frmDBConnection.btnSave_Click(Object sender, EventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\frmDBConnection.cs içinde: satýr 55
+2018-04-19 17:16:48,092 [1] ERROR log4net.Appender.RollingFileAppender - DB CONNECTION STRING SAVE FAILED!
+System.ArgumentException: Anahtar sözcük desteklenmiyor: 'metadata'.
+   konum: System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   konum: System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   konum: System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   konum: System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   konum: System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   konum: System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   konum: System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   konum: System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   konum: System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   konum: MssqlClient.Classes.Views.frmDBConnection.btnSave_Click(Object sender, EventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\frmDBConnection.cs içinde: satýr 62
+2018-04-19 17:17:57,096 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-19 17:22:35,799 [1] ERROR log4net.Appender.RollingFileAppender - DB CONNECTION STRING SAVE FAILED!
+System.Data.SqlClient.SqlException (0x80131904): Database 'test' already exists. Choose a different database name.
+   konum: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   konum: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   konum: System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   konum: MssqlClient.Classes.Views.frmDBConnection.btnSave_Click(Object sender, EventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\frmDBConnection.cs içinde: satýr 70
+ClientConnectionId:5e295eac-3a94-4d18-9bc0-533cb08f7596
+Error Number:1801,State:3,Class:16
+2018-04-19 17:22:48,702 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-19 17:30:44,904 [1] ERROR log4net.Appender.RollingFileAppender - Cannot connect to database
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   konum: System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   konum: System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   konum: System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.Open()
+   konum: MssqlClient.Classes.Beans.SqlHelper.IsConnection() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Beans\SqlHelper.cs içinde: satýr 33
+ClientConnectionId:5dd38aa2-bbea-4883-8071-360d592d9e5b
+Error Number:18456,State:1,Class:14
+2018-04-19 17:31:01,374 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-20 10:57:59,166 [1] ERROR log4net.Appender.RollingFileAppender - DB CREATÝON FAÝLED!
+System.Data.SqlClient.SqlException (0x80131904): Database 'test' already exists. Choose a different database name.
+   konum: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   konum: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   konum: System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   konum: MssqlClient.Classes.Views.frmDBConnection.CreateDatabase(String connectionString) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\frmDBConnection.cs içinde: satýr 112
+   konum: MssqlClient.Classes.Views.frmDBConnection.btnSave_Click(Object sender, EventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\frmDBConnection.cs içinde: satýr 77
+ClientConnectionId:7c024329-2e34-48e0-ac14-d379b80dd788
+Error Number:1801,State:3,Class:16
+2018-04-20 11:00:20,304 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-20 11:02:04,436 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-20 15:23:48,229 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-20 20:13:04,163 [1] ERROR log4net.Appender.RollingFileAppender - Cannot delete database;
+System.ArgumentException: Anahtar sözcük desteklenmiyor: 'dsn'.
+   konum: System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   konum: System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   konum: System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   konum: System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   konum: System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   konum: System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   konum: System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   konum: System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   konum: System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   konum: MssqlClient.Classes.Views.FrmDbConnection.ExecuteQuery(String conString, String query) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmDBConnection.cs içinde: satýr 227
+2018-04-20 20:16:23,694 [1] ERROR log4net.Appender.RollingFileAppender - Cannot delete database;
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'GO'.
+Incorrect syntax near 'GO'.
+   konum: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   konum: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   konum: System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   konum: System.Data.SqlClient.SqlDataReader.get_MetaData()
+   konum: System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteReader()
+   konum: MssqlClient.Classes.Views.FrmDbConnection.ExecuteQuery(String conString, String query) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmDBConnection.cs içinde: satýr 233
+ClientConnectionId:ab4a9b50-d0a3-4d5c-8b8d-46eff814f129
+Error Number:102,State:1,Class:15
+2018-04-20 20:30:59,319 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-20 20:31:53,731 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-20 20:32:19,948 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-20 20:32:37,033 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-04-22 00:23:36,030 [1] ERROR log4net.Appender.RollingFileAppender - Cannot connect to database
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'aa'.
+   konum: System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   konum: System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   konum: System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.Open()
+   konum: MssqlClient.Classes.Beans.SqlHelper.IsConnection() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Beans\SqlHelper.cs içinde: satýr 29
+ClientConnectionId:aed1f247-cd25-4ca2-a949-16ca2bfdd20e
+Error Number:18456,State:1,Class:14
+2018-04-22 00:23:38,440 [1] ERROR log4net.Appender.RollingFileAppender - Cannot connect to database
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'aa'.
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.Open()
+   konum: MssqlClient.Classes.Beans.SqlHelper.IsConnection() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Beans\SqlHelper.cs içinde: satýr 29
+ClientConnectionId:aed1f247-cd25-4ca2-a949-16ca2bfdd20e
+Error Number:18456,State:1,Class:14
+2018-04-22 00:23:41,933 [1] ERROR log4net.Appender.RollingFileAppender - Cannot connect to database
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'aa'.
+   konum: System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   konum: System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   konum: System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.Open()
+   konum: MssqlClient.Classes.Beans.SqlHelper.IsConnection() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Beans\SqlHelper.cs içinde: satýr 29
+ClientConnectionId:79dd4994-cf63-47f1-95af-dfb817dade08
+Error Number:18456,State:1,Class:14
+2018-04-22 16:19:50,827 [1] ERROR log4net.Appender.RollingFileAppender - DB CREATÝON FAÝLED!
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'DATABASE'.
+   konum: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   konum: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   konum: System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   konum: MssqlClient.Classes.Views.FrmDbConnection.CreateDatabase(String connectionString) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmDBConnection.cs içinde: satýr 192
+   konum: MssqlClient.Classes.Views.FrmDbConnection.btnSave_Click(Object sender, EventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmDBConnection.cs içinde: satýr 154
+ClientConnectionId:4999e825-f44a-4c21-8e72-1b157063a7f3
+Error Number:102,State:1,Class:15
+2018-04-28 01:15:25,857 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ObjectDisposedException: Býrakýlmýþ bir nesneye eriþilemiyor.
+Nesne adý: 'FrmEditDB'.
+   konum: System.Windows.Forms.Control.CreateHandle()
+   konum: System.Windows.Forms.Form.CreateHandle()
+   konum: System.Windows.Forms.Control.get_Handle()
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 29
+2018-04-28 01:15:45,214 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ObjectDisposedException: Býrakýlmýþ bir nesneye eriþilemiyor.
+Nesne adý: 'FrmEditDB'.
+   konum: System.Windows.Forms.Control.CreateHandle()
+   konum: System.Windows.Forms.Form.CreateHandle()
+   konum: System.Windows.Forms.Control.get_Handle()
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 29
+2018-04-28 01:15:52,183 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ObjectDisposedException: Býrakýlmýþ bir nesneye eriþilemiyor.
+Nesne adý: 'FrmEditDB'.
+   konum: System.Windows.Forms.Control.CreateHandle()
+   konum: System.Windows.Forms.Form.CreateHandle()
+   konum: System.Windows.Forms.Control.get_Handle()
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 29
+2018-05-22 20:40:35,648 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ObjectDisposedException: Býrakýlmýþ bir nesneye eriþilemiyor.
+Nesne adý: 'FrmEditDB'.
+   konum: System.Windows.Forms.Control.CreateHandle()
+   konum: System.Windows.Forms.Form.CreateHandle()
+   konum: System.Windows.Forms.Control.get_Handle()
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 29
+2018-05-22 20:41:46,006 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-05-22 20:41:48,754 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ObjectDisposedException: Býrakýlmýþ bir nesneye eriþilemiyor.
+Nesne adý: 'FrmEditDB'.
+   konum: System.Windows.Forms.Control.CreateHandle()
+   konum: System.Windows.Forms.Form.CreateHandle()
+   konum: System.Windows.Forms.Control.get_Handle()
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 29
+2018-05-22 20:52:17,289 [1] ERROR log4net.Appender.RollingFileAppender - Cannot connect to database
+System.Data.SqlClient.SqlException (0x80131904): Sunucuyla baþarýlý bir þekilde baðlantý kuruldu, ancak sonra oturum açma iþlemi sýrasýnda hata oluþtu. (provider: Shared Memory Provider, error: 0 - Borunun diðer ucunda iþlem yok.) ---> System.ComponentModel.Win32Exception (0x80004005): Borunun diðer ucunda iþlem yok
+   konum: System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   konum: System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   konum: System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   konum: System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   konum: System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   konum: System.Data.SqlClient.SqlConnection.Open()
+   konum: MssqlClient.Classes.Beans.SqlHelper.IsConnection() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Beans\SqlHelper.cs içinde: satýr 29
+ClientConnectionId:17bb8c69-221e-496f-b71a-5d9f7f421fde
+Error Number:233,State:0,Class:20
+2018-05-22 20:52:19,381 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ObjectDisposedException: Býrakýlmýþ bir nesneye eriþilemiyor.
+Nesne adý: 'FrmEditDB'.
+   konum: System.Windows.Forms.Control.CreateHandle()
+   konum: System.Windows.Forms.Form.CreateHandle()
+   konum: System.Windows.Forms.Control.get_Handle()
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 29
+2018-05-22 20:52:36,850 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ArgumentOutOfRangeException: Dizin aralýk dýþýndaydý. Negatif bir deðer olmamalý ve koleksiyonun boyutundan daha küçük olmalýdýr.
+Parametre adý: index
+   konum: System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   konum: DevExpress.XtraGrid.Columns.GridColumnCollection.get_Item(Int32 index)
+   konum: MssqlClient.Classes.Views.FrmEditDB.InitializeGrid() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 46
+   konum: MssqlClient.Classes.Views.FrmEditDB..ctor() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 31
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 28
+2018-05-22 20:52:40,624 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ArgumentOutOfRangeException: Dizin aralýk dýþýndaydý. Negatif bir deðer olmamalý ve koleksiyonun boyutundan daha küçük olmalýdýr.
+Parametre adý: index
+   konum: System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   konum: DevExpress.XtraGrid.Columns.GridColumnCollection.get_Item(Int32 index)
+   konum: MssqlClient.Classes.Views.FrmEditDB.InitializeGrid() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 46
+   konum: MssqlClient.Classes.Views.FrmEditDB..ctor() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 31
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 28
+2018-05-22 20:52:45,952 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ArgumentOutOfRangeException: Dizin aralýk dýþýndaydý. Negatif bir deðer olmamalý ve koleksiyonun boyutundan daha küçük olmalýdýr.
+Parametre adý: index
+   konum: System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   konum: DevExpress.XtraGrid.Columns.GridColumnCollection.get_Item(Int32 index)
+   konum: MssqlClient.Classes.Views.FrmEditDB.InitializeGrid() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 46
+   konum: MssqlClient.Classes.Views.FrmEditDB..ctor() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 31
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 28
+2018-05-22 20:52:57,754 [9] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ArgumentOutOfRangeException: Dizin aralýk dýþýndaydý. Negatif bir deðer olmamalý ve koleksiyonun boyutundan daha küçük olmalýdýr.
+Parametre adý: index
+   konum: System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   konum: DevExpress.XtraGrid.Columns.GridColumnCollection.get_Item(Int32 index)
+   konum: MssqlClient.Classes.Views.FrmEditDB.InitializeGrid() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 46
+   konum: MssqlClient.Classes.Views.FrmEditDB..ctor() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 31
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 28
+2018-05-24 00:48:30,163 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ArgumentOutOfRangeException: Dizin aralýk dýþýndaydý. Negatif bir deðer olmamalý ve koleksiyonun boyutundan daha küçük olmalýdýr.
+Parametre adý: index
+   konum: System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   konum: DevExpress.XtraGrid.Columns.GridColumnCollection.get_Item(Int32 index)
+   konum: MssqlClient.Classes.Views.FrmEditDB.InitializeGrid() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 42
+   konum: MssqlClient.Classes.Views.FrmEditDB.ListDatabases() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 110
+   konum: MssqlClient.Classes.Views.FrmEditDB..ctor() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 24
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 28
+2018-05-24 00:48:32,598 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ArgumentOutOfRangeException: Dizin aralýk dýþýndaydý. Negatif bir deðer olmamalý ve koleksiyonun boyutundan daha küçük olmalýdýr.
+Parametre adý: index
+   konum: System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   konum: DevExpress.XtraGrid.Columns.GridColumnCollection.get_Item(Int32 index)
+   konum: MssqlClient.Classes.Views.FrmEditDB.InitializeGrid() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 42
+   konum: MssqlClient.Classes.Views.FrmEditDB.ListDatabases() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 110
+   konum: MssqlClient.Classes.Views.FrmEditDB..ctor() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 24
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 28
+2018-05-24 00:50:41,788 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ArgumentOutOfRangeException: Dizin aralýk dýþýndaydý. Negatif bir deðer olmamalý ve koleksiyonun boyutundan daha küçük olmalýdýr.
+Parametre adý: index
+   konum: System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   konum: DevExpress.XtraGrid.Columns.GridColumnCollection.get_Item(Int32 index)
+   konum: MssqlClient.Classes.Views.FrmEditDB.InitializeGrid() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 42
+   konum: MssqlClient.Classes.Views.FrmEditDB.ListDatabases() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 110
+   konum: MssqlClient.Classes.Views.FrmEditDB..ctor() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 24
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 28

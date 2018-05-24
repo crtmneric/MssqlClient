@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBD01D8F-28A9-453D-B702-21257B49395D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MssqlClient</RootNamespace>
+    <AssemblyName>MssqlClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Beans\AppSettings.cs" />
+    <Compile Include="Classes\Beans\Logger.cs" />
+    <Compile Include="Classes\Beans\SqlHelper.cs" />
+    <Compile Include="Classes\Views\FrmDBConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Views\FrmDBConnection.Designer.cs">
+      <DependentUpon>FrmDBConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Views\FrmEditDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Views\FrmEditDB.Designer.cs">
+      <DependentUpon>FrmEditDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Views\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Views\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Beans\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Classes\Views\FrmDBConnection.resx">
+      <DependentUpon>FrmDBConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Views\FrmEditDB.resx">
+      <DependentUpon>FrmEditDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Views\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14916.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-logo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_add-database-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_database_wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1add-database-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1database_wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bggf.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgEdit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextbut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backbut.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

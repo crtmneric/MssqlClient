@@ -1,0 +1,14 @@
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\bin\Debug\MssqlClient.exe.config
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\bin\Debug\MssqlClient.exe
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\bin\Debug\MssqlClient.pdb
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.csprojResolveAssemblyReference.cache
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.Properties.Resources.resources
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.csproj.GenerateResource.Cache
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.exe.licenses
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.exe
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.pdb
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.Classes.Views.frmDBConnection.resources
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\bin\Debug\log4net.dll
+c:\users\serkan\documents\visual studio 2012\Projects\MssqlClient\MssqlClient\bin\Debug\log4net.xml
+C:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.Classes.Views.frmMain.resources
+C:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\obj\Debug\MssqlClient.Classes.Views.FrmEditDB.resources

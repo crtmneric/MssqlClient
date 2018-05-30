@@ -14,4 +14,5 @@ Create-Delete Database.
 Create-Delete-Edit Tables.
 
 # Final Project #
+You dont even have to know a single line of T-SQL ! just click some buttons and create glorious Database!
 It developed for a school project.

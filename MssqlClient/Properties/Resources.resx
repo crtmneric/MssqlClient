@@ -154,4 +154,7 @@
   <data name="backbut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backbut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rsz_close_icon_dark_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_close_icon_dark-256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

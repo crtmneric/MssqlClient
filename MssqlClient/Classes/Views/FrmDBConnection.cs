@@ -10,7 +10,6 @@ using DevExpress.XtraEditors.Repository;
 using MssqlClient.Classes.Beans;
 using MssqlClient.Properties;
 
-
 namespace MssqlClient.Classes.Views
 {
     public partial class FrmDbConnection : Form
@@ -60,7 +59,7 @@ namespace MssqlClient.Classes.Views
             foreach (string db in databaseNamesList)
             {
                 DatabaseNames name = new DatabaseNames();
-                name.Database_Name = db;
+                name.DatabaseName = db;
                 databaseNamesListBindingList.Add(name);
             }
 
@@ -69,16 +68,16 @@ namespace MssqlClient.Classes.Views
 
         private class DatabaseNames
         {
-            private String databaseName;
-            public String Database_Name
+            private String _databaseName;
+            public String DatabaseName
             {
                 get
                 {
-                    return databaseName;
+                    return _databaseName;
                 }
                 set
                 {
-                    databaseName = value;
+                    _databaseName = value;
                 }
             }
         }
@@ -119,7 +118,7 @@ namespace MssqlClient.Classes.Views
             string connectionString = string.Format("Data Source={0};User ID={1};Password={2};", cmbServer.Text,  txtUsrname.Text, txtPass.Text);
             try
             {
-                this.Cursor = Cursors.WaitCursor;
+                Cursor = Cursors.WaitCursor;
                 SqlHelper helper = new SqlHelper(connectionString);
                 if (helper.IsConnection())
                 {
@@ -137,7 +136,7 @@ namespace MssqlClient.Classes.Views
 
                     MessageBox.Show("Connection Failure", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                this.Cursor = Cursors.Default;
+                Cursor = Cursors.Default;
             }
             catch (Exception ex)
             {
@@ -156,14 +155,14 @@ namespace MssqlClient.Classes.Views
                 
                 ListDatabases();
                 InitializeGrid();
-                MssqlClient.Classes.Views.FrmMain.Log.Info("Database Created Succesfully!");   
+                FrmMain.Log.Info("Database Created Succesfully!");   
                 
     
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Somethink went wrong :(", "Sorry", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MssqlClient.Classes.Views.FrmMain.Log.Error("DB CREATİON FAİLED!", ex);
+                FrmMain.Log.Error("DB CREATİON FAİLED!", ex);
             }
            
             progressPanel1.Hide();}
@@ -196,7 +195,6 @@ namespace MssqlClient.Classes.Views
             {
                 MessageBox.Show("Need a valid database name!", "FAİLED!", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
-                return;
             }
            
           
@@ -239,7 +237,7 @@ namespace MssqlClient.Classes.Views
       
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         public List<string> GetDatabaseList(string conString)
@@ -303,7 +301,7 @@ namespace MssqlClient.Classes.Views
                 progressPanel1.Description = "Deleting now...";
                 if (DBNameBindingSource1.Current != null)
                 {
-                    String rowToDelete = (DBNameBindingSource1.Current as DatabaseNames).Database_Name;
+                    String rowToDelete = (DBNameBindingSource1.Current as DatabaseNames).DatabaseName;
                     if (MessageBox.Show(" are u sure to delete this database:"+rowToDelete+"?", "Uyarı!",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                         {

@@ -1,11 +1,15 @@
-﻿namespace MssqlClient.Classes.Views
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+
+namespace MssqlClient.Classes.Views
 {
     partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -30,10 +34,12 @@
         {
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
             this.tileDayToDo = new DevExpress.XtraEditors.TileItem();
             this.tileTicket = new DevExpress.XtraEditors.TileItem();
+            this.tileClose = new DevExpress.XtraEditors.TileItem();
             this.pctBack = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBack)).BeginInit();
@@ -50,10 +56,10 @@
             this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
             this.tileControl1.Groups.Add(this.tileGroup2);
             this.tileControl1.ItemSize = 250;
-            this.tileControl1.Location = new System.Drawing.Point(0, 0);
-            this.tileControl1.MaxId = 18;
+            this.tileControl1.Location = new System.Drawing.Point(0, 197);
+            this.tileControl1.MaxId = 20;
             this.tileControl1.Name = "tileControl1";
-            this.tileControl1.Size = new System.Drawing.Size(1920, 1080);
+            this.tileControl1.Size = new System.Drawing.Size(1920, 883);
             this.tileControl1.TabIndex = 1;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -61,6 +67,7 @@
             // 
             this.tileGroup2.Items.Add(this.tileDayToDo);
             this.tileGroup2.Items.Add(this.tileTicket);
+            this.tileGroup2.Items.Add(this.tileClose);
             this.tileGroup2.Name = "tileGroup2";
             // 
             // tileDayToDo
@@ -90,7 +97,7 @@
             // tileTicket
             // 
             this.tileTicket.AppearanceItem.Normal.BackColor = System.Drawing.Color.DarkCyan;
-            this.tileTicket.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.SteelBlue;
+            this.tileTicket.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.DeepSkyBlue;
             this.tileTicket.AppearanceItem.Normal.BorderColor = System.Drawing.Color.Black;
             this.tileTicket.AppearanceItem.Normal.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tileTicket.AppearanceItem.Normal.Options.UseBackColor = true;
@@ -111,12 +118,36 @@
             this.tileTicket.Name = "tileTicket";
             this.tileTicket.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileTicket_ItemClick);
             // 
+            // tileClose
+            // 
+            this.tileClose.AppearanceItem.Normal.BackColor = System.Drawing.Color.DarkCyan;
+            this.tileClose.AppearanceItem.Normal.BackColor2 = System.Drawing.Color.Firebrick;
+            this.tileClose.AppearanceItem.Normal.BorderColor = System.Drawing.Color.Black;
+            this.tileClose.AppearanceItem.Normal.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tileClose.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.tileClose.AppearanceItem.Normal.Options.UseBorderColor = true;
+            this.tileClose.AppearanceItem.Normal.Options.UseFont = true;
+            this.tileClose.AppearanceItem.Pressed.BackColor = System.Drawing.Color.Turquoise;
+            this.tileClose.AppearanceItem.Pressed.BackColor2 = System.Drawing.Color.Firebrick;
+            this.tileClose.AppearanceItem.Pressed.BorderColor = System.Drawing.Color.Black;
+            this.tileClose.AppearanceItem.Pressed.Options.UseBackColor = true;
+            this.tileClose.AppearanceItem.Pressed.Options.UseBorderColor = true;
+            tileItemElement3.Image = global::MssqlClient.Properties.Resources.rsz_close_icon_dark_256;
+            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
+            tileItemElement3.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Left;
+            tileItemElement3.Text = "         CLOSE";
+            this.tileClose.Elements.Add(tileItemElement3);
+            this.tileClose.Id = 19;
+            this.tileClose.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileClose.Name = "tileClose";
+            this.tileClose.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileClose_ItemClick);
+            // 
             // pctBack
             // 
             this.pctBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pctBack.Location = new System.Drawing.Point(0, 0);
+            this.pctBack.Location = new System.Drawing.Point(0, 197);
             this.pctBack.Name = "pctBack";
-            this.pctBack.Size = new System.Drawing.Size(1920, 1080);
+            this.pctBack.Size = new System.Drawing.Size(1920, 883);
             this.pctBack.TabIndex = 0;
             this.pctBack.TabStop = false;
             // 
@@ -140,9 +171,9 @@
             this.BackgroundImage = global::MssqlClient.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.tileControl1);
             this.Controls.Add(this.pctBack);
+            this.Controls.Add(this.pctLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -156,12 +187,13 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pctBack;
-        private DevExpress.XtraEditors.TileControl tileControl1;
-        private DevExpress.XtraEditors.TileGroup tileGroup2;
-        private DevExpress.XtraEditors.TileItem tileDayToDo;
-        private DevExpress.XtraEditors.TileItem tileTicket;
-        private System.Windows.Forms.PictureBox pctLogo;
+        private PictureBox pctBack;
+        private TileControl tileControl1;
+        private TileGroup tileGroup2;
+        private TileItem tileDayToDo;
+        private TileItem tileTicket;
+        private PictureBox pctLogo;
+        private TileItem tileClose;
     }
 }
 

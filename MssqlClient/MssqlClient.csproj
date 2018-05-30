@@ -82,6 +82,7 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Beans\Program.cs" />
+    <Compile Include="Classes\Beans\Initialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Classes\Views\FrmDBConnection.resx">
       <DependentUpon>FrmDBConnection.cs</DependentUpon>
@@ -158,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backbut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_close_icon_dark-256.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

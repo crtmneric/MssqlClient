@@ -1,11 +1,17 @@
-﻿namespace MssqlClient.Classes.Views
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraWaitForm;
+
+namespace MssqlClient.Classes.Views
 {
     partial class FrmDbConnection
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -296,24 +302,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.ComboBox cmbServer;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtExpDate;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDatabase;
-        private System.Windows.Forms.TextBox txtUsrname;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.BindingSource DBNameBindingSource1;
+        private Label label4;
+        private TextBox txtPass;
+        private ComboBox cmbServer;
+        private GroupBox groupBox2;
+        private Button btnClose;
+        private Button btnTest;
+        private Button btnSave;
+        private TextBox txtExpDate;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private TextBox txtDatabase;
+        private TextBox txtUsrname;
+        private GroupBox groupBox1;
+        private ProgressPanel progressPanel1;
+        private GridControl gridControl1;
+        private GridView gridView1;
+        private BindingSource DBNameBindingSource1;
 
     }
 }

@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/33338684486c4e9083e20696271e61ea)](https://www.codacy.com/app/crtmneric/MssqlClient?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=crtmneric/MssqlClient&amp;utm_campaign=Badge_Grade)
 # MssqlClient
 Main Screen       | 
 ------------|

@@ -35,6 +35,7 @@ namespace MssqlClient.Classes.Views
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDbConnection));
             this.label4 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.cmbServer = new System.Windows.Forms.ComboBox();
@@ -285,9 +286,10 @@ namespace MssqlClient.Classes.Views
             this.ClientSize = new System.Drawing.Size(768, 977);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDbConnection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDBConnection";
+            this.Text = "MssqlClient-DBList";
             this.Load += new System.EventHandler(this.frmDBConnection_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

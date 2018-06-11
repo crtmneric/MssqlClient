@@ -345,21 +345,18 @@ namespace MssqlClient.Classes.Views
                         {
                             _idValue = column.ColumnName;
                         }
-
                         counter++;
                     }
 
                     if (MessageBox.Show(" are u sure to delete this " + _idValue+":"+value + " valued row?", "Warning!",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes){
-                        List<string> cevap = new List<string>();
-                        cevap = ExecuteSqlCommand("DELETE FROM "+lblTable.Text.Split(':')[1]+" WHERE "+_idValue+"="+value , "Initial Catalog=" + _globalDatabaseName + ";" + ConnectionString);
+                                List<string> cevap = ExecuteSqlCommand("DELETE FROM " + lblTable.Text.Split(':')[1] + " WHERE " + _idValue + "=" + value, "Initial Catalog=" + _globalDatabaseName + ";" + ConnectionString);
                         if (cevap.Count == 0)
                         {
                             MessageBox.Show("Server's answer: Success", "Succeed!", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
                             _deleteValue = true;
-                            SelectOption();
-                            _deleteValue = false;
+                            SelectOption();_deleteValue = false;
                         }
                         else
                         {

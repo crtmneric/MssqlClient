@@ -291,3 +291,13 @@ Parametre adý: index
    konum: MssqlClient.Classes.Views.FrmEditDB.ListDatabases() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 110
    konum: MssqlClient.Classes.Views.FrmEditDB..ctor() c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 24
    konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) c:\Users\Serkan\Documents\Visual Studio 2012\Projects\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 28
+2018-06-19 14:11:50,273 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.ObjectDisposedException: Býrakýlmýþ bir nesneye eriþilemiyor.
+Nesne adý: 'FrmEditDb'.
+   konum: System.Windows.Forms.Control.CreateHandle()
+   konum: System.Windows.Forms.Form.CreateHandle()
+   konum: System.Windows.Forms.Control.get_Handle()
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 30
+2018-06-19 14:36:06,974 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!

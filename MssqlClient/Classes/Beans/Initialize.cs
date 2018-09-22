@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
-using DevExpress.Utils;
+﻿using DevExpress.Utils;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using MssqlClient.Classes.Views;
 using MssqlClient.Properties;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 
 namespace MssqlClient.Classes.Beans
 {
@@ -16,7 +16,8 @@ namespace MssqlClient.Classes.Beans
 
         public Initialize(FrmEditDb frmEditDb)
         {
-            _frmEditDb = frmEditDb;}
+            _frmEditDb = frmEditDb;
+        }
 
         public void InitializeGrid()
         {
@@ -34,6 +35,8 @@ namespace MssqlClient.Classes.Beans
             _frmEditDb.Gridview2.Columns[0].OptionsColumn.AllowEdit = false;
             _frmEditDb.Gridview2.Columns[0].OptionsColumn.ReadOnly = true;
             _frmEditDb.Gridview2.BestFitColumns();
+            _frmEditDb.Gridcontrol2.UseEmbeddedNavigator = true;
+
         }
 
         public void InitializeTableValue()
@@ -84,7 +87,7 @@ namespace MssqlClient.Classes.Beans
                     return false;
                 }
 
-               
+
             }
 
             else

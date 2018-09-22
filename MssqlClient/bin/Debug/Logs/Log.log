@@ -301,3 +301,91 @@ Nesne adý: 'FrmEditDb'.
    konum: System.Windows.Forms.Form.ShowDialog()
    konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 30
 2018-06-19 14:36:06,974 [1] INFO  log4net.Appender.RollingFileAppender - Database Created Succesfully!
+2018-07-01 21:38:48,866 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'from'.
+   konum: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   konum: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   konum: System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   konum: System.Data.SqlClient.SqlDataReader.get_MetaData()
+   konum: System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   konum: System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   konum: System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   konum: System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   konum: MssqlClient.Classes.Views.FrmEditDb.ListTableValues(String tableName, String conString) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 259
+   konum: MssqlClient.Classes.Views.FrmEditDb.GetAllValues(String tableNamecik, String connString) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 79
+   konum: MssqlClient.Classes.Views.FrmEditDb.SelectOption() C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 145
+   konum: MssqlClient.Classes.Views.FrmEditDb.gridView1_DoubleClick(Object sender, EventArgs e) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 245
+   konum: DevExpress.XtraGrid.Views.Base.BaseView.RaiseDoubleClick(EventArgs e)
+   konum: DevExpress.XtraGrid.Views.Grid.Handler.GridHandler.OnDoubleClick(MouseEventArgs ev)
+   konum: DevExpress.Utils.Controls.BaseHandler.ProcessEvent(EventType etype, Object args)
+   konum: DevExpress.XtraGrid.Views.Base.Handler.BaseViewHandler.ProcessEvent(EventType etype, Object args)
+   konum: DevExpress.XtraGrid.GridControl.OnDoubleClick(EventArgs ev)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: DevExpress.XtraEditors.Container.EditorContainer.WndProc(Message& m)
+   konum: DevExpress.XtraGrid.GridControl.WndProc(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 31
+ClientConnectionId:7b802d10-cda2-4420-8f04-f3e2353fca07
+Error Number:102,State:1,Class:15
+2018-07-01 21:39:06,738 [1] ERROR log4net.Appender.RollingFileAppender - login credentials cannot be found
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'from'.
+   konum: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   konum: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   konum: System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   konum: System.Data.SqlClient.SqlDataReader.get_MetaData()
+   konum: System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   konum: System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   konum: System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   konum: System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   konum: MssqlClient.Classes.Views.FrmEditDb.ListTableValues(String tableName, String conString) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 259
+   konum: MssqlClient.Classes.Views.FrmEditDb.GetAllValues(String tableNamecik, String connString) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 79
+   konum: MssqlClient.Classes.Views.FrmEditDb.SelectOption() C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 145
+   konum: MssqlClient.Classes.Views.FrmEditDb.gridView1_DoubleClick(Object sender, EventArgs e) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmEditDB.cs içinde: satýr 245
+   konum: DevExpress.XtraGrid.Views.Base.BaseView.RaiseDoubleClick(EventArgs e)
+   konum: DevExpress.XtraGrid.Views.Grid.Handler.GridHandler.OnDoubleClick(MouseEventArgs ev)
+   konum: DevExpress.Utils.Controls.BaseHandler.ProcessEvent(EventType etype, Object args)
+   konum: DevExpress.XtraGrid.Views.Base.Handler.BaseViewHandler.ProcessEvent(EventType etype, Object args)
+   konum: DevExpress.XtraGrid.GridControl.OnDoubleClick(EventArgs ev)
+   konum: System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   konum: System.Windows.Forms.Control.WndProc(Message& m)
+   konum: DevExpress.XtraEditors.Container.EditorContainer.WndProc(Message& m)
+   konum: DevExpress.XtraGrid.GridControl.WndProc(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   konum: System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   konum: System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   konum: System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   konum: System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   konum: System.Windows.Forms.Application.RunDialog(Form form)
+   konum: System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   konum: System.Windows.Forms.Form.ShowDialog()
+   konum: MssqlClient.Classes.Views.FrmMain.tileTicket_ItemClick(Object sender, TileItemEventArgs e) C:\Users\Serkan\Documents\GitHub\MssqlClient\MssqlClient\Classes\Views\FrmMain.cs içinde: satýr 31
+ClientConnectionId:7b802d10-cda2-4420-8f04-f3e2353fca07
+Error Number:102,State:1,Class:15

@@ -1,14 +1,14 @@
-﻿using System;
+﻿using DevExpress.Utils;
+using DevExpress.XtraEditors.Repository;
+using MssqlClient.Classes.Beans;
+using MssqlClient.Properties;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using DevExpress.Utils;
-using DevExpress.XtraEditors.Repository;
-using MssqlClient.Classes.Beans;
-using MssqlClient.Properties;
 
 namespace MssqlClient.Classes.Views
 {
@@ -16,7 +16,7 @@ namespace MssqlClient.Classes.Views
     {
         public FrmDbConnection()
         {
-          
+
             InitializeComponent();
 
             InitializeOptions();
@@ -28,13 +28,14 @@ namespace MssqlClient.Classes.Views
                 gridView1.Columns[0].OptionsColumn.ReadOnly = true;
                 InitializeGrid();
             }
-         progressPanel1.Hide();}
+            progressPanel1.Hide();
+        }
 
-      
+
         private void InitializeGrid()
         {
-          
-                
+
+
             gridView1.Columns[0].AppearanceCell.Font = new Font("Segoe UI", 16);
             gridView1.Columns[0].AppearanceHeader.Font = new Font("Segoe UI", 18);
             RepositoryItemMemoEdit repoMemo = new RepositoryItemMemoEdit(); gridControl1.RepositoryItems.Add(repoMemo);
@@ -50,7 +51,7 @@ namespace MssqlClient.Classes.Views
 
         private void ListDatabases()
         {
-           
+
             string connectionString = string.Format("Data Source={0};User ID={1};Password={2};", cmbServer.Text,
                 txtUsrname.Text, txtPass.Text);
             List<DatabaseNames> databaseNamesListBindingList = new List<DatabaseNames>();
@@ -114,8 +115,8 @@ namespace MssqlClient.Classes.Views
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-         
-            string connectionString = string.Format("Data Source={0};User ID={1};Password={2};", cmbServer.Text,  txtUsrname.Text, txtPass.Text);
+
+            string connectionString = string.Format("Data Source={0};User ID={1};Password={2};", cmbServer.Text, txtUsrname.Text, txtPass.Text);
             try
             {
                 Cursor = Cursors.WaitCursor;
@@ -151,21 +152,22 @@ namespace MssqlClient.Classes.Views
             string connectionString = string.Format("Data Source={0};User ID={1};Password={2};", cmbServer.Text, txtUsrname.Text, txtPass.Text);
             try
             {
-               CreateDatabase(connectionString);
-                
+                CreateDatabase(connectionString);
+
                 ListDatabases();
                 InitializeGrid();
-                FrmMain.Log.Info("Database Created Succesfully!");   
-                
-    
+                FrmMain.Log.Info("Database Created Succesfully!");
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Somethink went wrong :(", "Sorry", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 FrmMain.Log.Error("DB CREATİON FAİLED!", ex);
             }
-           
-            progressPanel1.Hide();}
+
+            progressPanel1.Hide();
+        }
 
         private void CreateDatabase(string connectionString)
         {
@@ -187,7 +189,7 @@ namespace MssqlClient.Classes.Views
                     command.CommandText = "CREATE DATABASE " + txtDatabase.Text;
                     command.ExecuteNonQuery();
                 }
-               
+
                 MessageBox.Show("Database created successfully!", "Success!", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
@@ -196,8 +198,8 @@ namespace MssqlClient.Classes.Views
                 MessageBox.Show("Need a valid database name!", "FAİLED!", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
-           
-          
+
+
         }
 
         private void SaveToFile()
@@ -210,15 +212,15 @@ namespace MssqlClient.Classes.Views
                 file2.WriteLine("InitialCatalog:" + txtDatabase.Text);
                 file2.WriteLine("Username:" + txtUsrname.Text);
                 file2.WriteLine("Pass:" + txtPass.Text);
-               
+
 
                 file2.Close();
             }
             catch (Exception e)
             {
-              FrmMain.Log.Error("Cannot save connection string",e);
+                FrmMain.Log.Error("Cannot save connection string", e);
             }
-           
+
         }
 
         private void frmDBConnection_Load(object sender, EventArgs e)
@@ -234,7 +236,7 @@ namespace MssqlClient.Classes.Views
             cmbServer.SelectedIndex = 0;
         }
 
-      
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -258,7 +260,7 @@ namespace MssqlClient.Classes.Views
                     }
                 }
             }
-            
+
             return list;
         }
 
@@ -287,7 +289,7 @@ namespace MssqlClient.Classes.Views
             }
             catch (Exception ex)
             {
-               FrmMain.Log.Error("Cannot delete database;",ex);
+                FrmMain.Log.Error("Cannot delete database;", ex);
                 throw;
             }
         }
@@ -297,30 +299,30 @@ namespace MssqlClient.Classes.Views
         {
             if (e.KeyCode == Keys.Delete)
             {
-               progressPanel1.Show();
+                progressPanel1.Show();
                 progressPanel1.Description = "Deleting now...";
                 if (DBNameBindingSource1.Current != null)
                 {
                     String rowToDelete = (DBNameBindingSource1.Current as DatabaseNames).DatabaseName;
-                    if (MessageBox.Show(" are u sure to delete this database:"+rowToDelete+"?", "Uyarı!",
+                    if (MessageBox.Show(" are u sure to delete this database:" + rowToDelete + "?", "Uyarı!",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                        {
+                    {
 
 
-                            string connectionString = string.Format("Data Source={0};User ID={1};Password={2};Initial Catalog=master; Integrated Security=True;", cmbServer.Text, txtUsrname.Text, txtPass.Text);
-                            List<string> cevap = new List<string>();
-                            cevap = ExecuteQuery(connectionString, "DROP DATABASE [" + rowToDelete+ "] ;");
-                             MessageBox.Show("Server's answer: Success", "Succeed!", MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                            ListDatabases();
-                            gridView1.BestFitColumns();
-                        } 
-                    
+                        string connectionString = string.Format("Data Source={0};User ID={1};Password={2};Initial Catalog=master; Integrated Security=True;", cmbServer.Text, txtUsrname.Text, txtPass.Text);
+                        List<string> cevap = new List<string>();
+                        cevap = ExecuteQuery(connectionString, "DROP DATABASE [" + rowToDelete + "] ;");
+                        MessageBox.Show("Server's answer: Success", "Succeed!", MessageBoxButtons.OK,
+                           MessageBoxIcon.Information);
+                        ListDatabases();
+                        gridView1.BestFitColumns();
+                    }
+
                 }
             }
             progressPanel1.Hide();
         }
 
-      
+
     }
 }

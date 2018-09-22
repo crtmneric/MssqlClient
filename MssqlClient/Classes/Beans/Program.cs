@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MssqlClient.Classes.Views;
+using System;
 using System.Windows.Forms;
-using MssqlClient.Classes.Views;
 
 namespace MssqlClient
 {

@@ -1,11 +1,11 @@
-﻿using System;
+﻿using MssqlClient.Classes.Views;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using MssqlClient.Classes.Views;
 
 namespace MssqlClient.Classes.Beans
 {
-    class SqlHelper:IDisposable
+    class SqlHelper : IDisposable
     {
         SqlConnection _cn;
         public void Dispose()
@@ -30,7 +30,8 @@ namespace MssqlClient.Classes.Beans
                 }
                 return true;
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 FrmMain.Log.Error("Cannot connect to database", ex);
                 return false;
             }

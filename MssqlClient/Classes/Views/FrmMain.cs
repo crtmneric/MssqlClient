@@ -1,11 +1,12 @@
-﻿using System;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using log4net;
 using log4net.Appender;
 using MssqlClient.Classes.Beans;
+using System;
+using System.Windows.Forms;
 
-namespace MssqlClient.Classes.Views{
+namespace MssqlClient.Classes.Views
+{
     public partial class FrmMain : Form
     {
         public static readonly ILog Log = LogManager.GetLogger(typeof(RollingFileAppender));
@@ -31,9 +32,9 @@ namespace MssqlClient.Classes.Views{
             }
             catch (Exception ex)
             {
-                Log.Error("login credentials cannot be found",ex);
-             }
-          
+                Log.Error("login credentials cannot be found", ex);
+            }
+
 
         }
 
@@ -42,5 +43,5 @@ namespace MssqlClient.Classes.Views{
             Application.Exit();
         }
 
-     }
+    }
 }
